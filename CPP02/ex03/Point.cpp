@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:58:45 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 12:44:02 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
 #include "Fixed.hpp"
@@ -40,12 +51,12 @@ Point::~Point()
      std::cout << "Point Destructor called" << std::endl;
 }
 
-int Point::get_X() const 
+float Point::get_X() const 
 {
     return this->x.toFloat() ;
 
 }
-int Point::get_Y() const 
+float Point::get_Y() const 
 {
     return this->y.toFloat();
 }

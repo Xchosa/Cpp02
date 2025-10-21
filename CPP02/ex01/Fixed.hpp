@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:09:20 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 10:26:27 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
@@ -36,8 +46,8 @@ class Fixed
 
     float toFloat( void ) const;
     int toInt(void ) const;
-    friend std::ostream& operator<<(std::ostream& os, const Fixed&obj);
 };
 
+std::ostream& operator<<(std::ostream& os, const Fixed&obj);
 
 #endif

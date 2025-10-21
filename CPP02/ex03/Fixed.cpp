@@ -1,10 +1,20 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:58:28 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 12:05:10 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
 Fixed::Fixed(){
-     this->fixed_point_Nbr= 0; 
+     setRawBits(0); 
 }; 
 
 // convert to fixed-point values -> init to 8;
@@ -39,8 +49,7 @@ Fixed& Fixed::operator=(const Fixed& other)
 {
     if(this != &other)
     {
-        this->fixed_point_Nbr = other.fixed_point_Nbr;
-        // this->fixed_point_Nbr = other.getRawBits();
+        this->fixed_point_Nbr = other.getRawBits();
     }
     return *this;
 };
@@ -207,22 +216,3 @@ Fixed Fixed::operator++(int)
     return(copy_obj);
 }
 
-// compilor differs automatecially if given parameter is const object, a const object needs to bee returned
-Fixed& Fixed::min( Fixed& a_object, Fixed& b_object)
-{
-    return(a_object < b_object) ? a_object : b_object;
-}
-
-Fixed& Fixed::max(Fixed& a , Fixed& b)
-{
-    return(a > b) ? a : b;
-}
-
-const Fixed& Fixed::min( const Fixed& a_object, const Fixed& b_object)
-{
-    return(a_object < b_object) ? a_object : b_object;
-}
-const Fixed& Fixed::max( const Fixed& a , const Fixed& b )
-{
-    return(a > b) ? a : b;
-}

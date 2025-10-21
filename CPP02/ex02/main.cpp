@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:43:22 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 10:48:18 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath> 
@@ -23,7 +34,19 @@ int main( void )
         std::cout << b << " b is smaler then c " << c << std::endl;
 
         
-    // Fixed a;
+    
+    //Fixed a;
+    //Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+    //std::cout << a << std::endl;
+    //std::cout << ++a << std::endl;
+    //std::cout << a << std::endl;
+    //std::cout << a++ << std::endl;
+    //std::cout << a << std::endl;
+    //std::cout << b << std::endl;
+    //std::cout << Fixed::max( a, b ) << std::endl;
+    //return 0;
+
+        
 
 
     Fixed const d( Fixed( 5.05f ) * Fixed( 2 ) ); // Fixed(5.05f).operator*(Fixed(2))

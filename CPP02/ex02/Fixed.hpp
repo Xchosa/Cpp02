@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:43:17 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 10:44:52 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
@@ -36,13 +46,7 @@ class Fixed
 
     float toFloat( void ) const;
     int toInt(void ) const;
-
-
-
-    
-
-    // int Fixed::Increase_by_epsilon(void) const;
-    friend std::ostream& operator<<(std::ostream& output_obj, const Fixed&obj_fixed);
+   
 
     // a < b  => a.object(b)
     bool operator<(const Fixed& o_object) const;
@@ -74,5 +78,5 @@ class Fixed
     static const Fixed& max( const Fixed& , const Fixed& ) ;
 };
 
-
+std::ostream& operator<<(std::ostream& output_obj, const Fixed&obj_fixed);
 #endif

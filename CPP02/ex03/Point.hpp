@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:58:51 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 12:42:04 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef POINT_HPP
 # define POINT_HPP
 
@@ -20,8 +32,8 @@ class Point
     Point(const Point& object);
     Point& operator=(const Point& Object);
     ~Point();
-    int get_X() const;
-    int get_Y() const;
+    float get_X() const;
+    float get_Y() const;
     
 };
 bool bsp( Point const a, Point const b, Point const c, Point const point);

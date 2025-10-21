@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:47:17 by poverbec          #+#    #+#             */
-/*   Updated: 2025/10/21 09:28:12 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/10/21 09:55:01 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 Fixed::Fixed()
 {
     std::cout << "Default constructor called" << std::endl;
-    this->fp_Nbr = 0; // clearify working with member variable 
+    //this->fp_Nbr = 0; // works, dirty way without using the setter function
+    setRawBits(0);
 
 }
 
@@ -38,7 +39,8 @@ Fixed& Fixed::operator=(const Fixed& other)
     if(this != &other)
     {
         // this->fp_Nbr = other.fp_Nbr;
-        this->fp_Nbr = other.getRawBits(); // for the exact same output
+        //this->fp_Nbr = other.getRawBits(); // for the exact same output
+        setRawBits(other.getRawBits());
     }
     return (*this);
 }

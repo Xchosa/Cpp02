@@ -1,11 +1,21 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:43:12 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 10:57:24 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 
 Fixed::Fixed(){
      std::cout << "Default constructor called" << std::endl;
-     this->fixed_point_Nbr= 0; 
+     setRawBits(0); 
 }; 
 
 // convert to fixed-point values -> init to 8;
@@ -32,12 +42,12 @@ Fixed::Fixed(const float float_value)
 Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->fixed_point_Nbr = other.fixed_point_Nbr;
+    this->fixed_point_Nbr = other.getRawBits();
 
 };
 
 Fixed::~Fixed(){
-    std::cout << "Destructor called" << std::endl;
+    //std::cout << "Destructor called" << std::endl;
 };
 
 Fixed& Fixed::operator=(const Fixed& other)
@@ -45,8 +55,7 @@ Fixed& Fixed::operator=(const Fixed& other)
     std::cout << "Copy assignment operator called" << std::endl;\
     if(this != &other)
     {
-        this->fixed_point_Nbr = other.fixed_point_Nbr;
-        // this->fixed_point_Nbr = other.getRawBits();
+        this->fixed_point_Nbr = other.getRawBits();
     }
     return *this;
 };

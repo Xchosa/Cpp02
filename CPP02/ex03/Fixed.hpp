@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 10:58:33 by poverbec          #+#    #+#             */
+/*   Updated: 2025/10/21 12:05:00 by poverbec         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
 #ifndef FIXED_HPP
@@ -64,14 +75,7 @@ class Fixed
     Fixed& operator++();
     Fixed operator++(int); 
     // Fixed& Fixed::operator++(int);
-
-
-
-    static Fixed& min( Fixed& a_object, Fixed& b_object) ;
-    static Fixed& max( Fixed& , Fixed& );
-
-    static const Fixed& min( const Fixed& a_object, const Fixed& b_object) ;
-    static const Fixed& max( const Fixed& , const Fixed& ) ;
+    
 };
 
 

@@ -3,6 +3,7 @@ CXX = c++
 
 # Compiler flags
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+# valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
 
 # Target executable
 TARGET = main
