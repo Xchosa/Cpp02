@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:47:17 by poverbec          #+#    #+#             */
-/*   Updated: 2025/10/15 09:47:20 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/10/21 09:28:12 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed& other) // pass by reference
 {
         std::cout << "Copy constructor called" << std::endl;
-        // this->fp_Nbr = other.fp_Nbr; // cpy raw bits intho other object  
+        // this->fp_Nbr = other.fp_Nbr; // bad practice -> using encapsulated getter function , calling a 
+        // const method not modifiying the source object. 
         this->fp_Nbr = other.getRawBits();
 }
 
@@ -54,16 +55,15 @@ int Fixed::getRawBits(void) const
 }
 
 
+//sets the raw value of the fixed-point number
 void Fixed::setRawBits(int const raw)
 {
- //sets the raw value of the fixed-point number
     this->fp_Nbr = raw;
-
 };
 
 
 
-
+// List initalization
 // Fixed::Fixed(int value) : fp_Nbr(fp_Nbr)
 // {
 //     std::cout << "Parameterized constructor called" << std::endl;
