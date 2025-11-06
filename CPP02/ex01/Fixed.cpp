@@ -6,12 +6,11 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 10:09:15 by poverbec          #+#    #+#             */
-/*   Updated: 2025/10/21 10:40:59 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/11/06 09:59:10 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
 
 Fixed::Fixed(){
      std::cout << "Default constructor called" << std::endl;
